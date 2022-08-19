@@ -1,10 +1,11 @@
 @import url("nulleble.css");
 @font-face {
-    font-family: Glitch; /* Имя шрифта */
-    src: url(titleFont.ttf); /* Путь к файлу со шрифтом */
+    font-family: Glitch;
+    src: url(../fonts/titleFont.ttf);
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 
+/* Стили первого блока страницы (блок с видео) */
 .firstBlockContainer {
     position: relative;
     min-height: 100vh;
@@ -49,7 +50,7 @@
     margin: 0;
     padding: 0 0 0 60px;
     list-style: none;
-    background-image: url("./marker.svg");
+    background-image: url("../img/marker.svg");
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 30px;
@@ -57,9 +58,10 @@
     font-size: 21px;
     line-height: 120%;
 }
-.productInfo button {
+.order {
     height: 60px;
     padding: 0 60px;
+    width: fit-content;
     font-size: 16px;
     border-radius: 45px;
     border: 2px solid rgb(63, 17, 138);
@@ -69,11 +71,54 @@
     font-weight: 500;
     transition: all .2s;
 }
-.productInfo button:hover { box-shadow: 0px 0px 20px rgb(75, 12, 175); }
+.order:hover { box-shadow: 0px 0px 20px rgb(75, 12, 175); }
 .productInfo ul li:not(:last-child) { margin-bottom: 20px; }
+
+/* Стили второго блока страницы (блок с ингридиентами) */
 .secondBlockContainer {
     background: rgb(171,130,255);
     background: radial-gradient(circle, rgba(171,130,255,1) 0%, rgba(14,0,43,1) 100%);
     position: relative;
     z-index: 3;
 }
+.secondBlockContent {
+    padding: 80px 0;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.itemImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 25px 0;
+}
+.item img { width: 60%;}
+.itemName {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+.productSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стили четвертого блока страницы (блок-промо) */

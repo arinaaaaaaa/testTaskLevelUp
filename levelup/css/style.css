@@ -46,7 +46,7 @@
 }
 .productInfo img { max-height: 80vh; width: auto;}
 .productInfo > * { width: 50%; }
-.productInfo ul li {
+.productInfo ul li, .information ul li {
     margin: 0;
     padding: 0 0 0 60px;
     list-style: none;
@@ -58,6 +58,8 @@
     font-size: 21px;
     line-height: 120%;
 }
+.productInfo ul li:not(:last-child) { margin-bottom: 20px; }
+.promoContent ul li:not(:last-child) { margin-bottom: 10px; }
 .order {
     height: 60px;
     padding: 0 60px;
@@ -72,7 +74,6 @@
     transition: all .2s;
 }
 .order:hover { box-shadow: 0px 0px 20px rgb(75, 12, 175); }
-.productInfo ul li:not(:last-child) { margin-bottom: 20px; }
 
 /* Стили второго блока страницы (блок с ингридиентами) */
 .secondBlockContainer {
@@ -122,3 +123,29 @@
 }
 
 /* Стили четвертого блока страницы (блок-промо) */
+.promoSection {
+    position: relative;
+    z-index: 3;
+    background: rgb(234,224,255);
+    background: linear-gradient(180deg, rgba(234,224,255,1) 0%, rgba(255,255,255,1) 100%);
+}
+.promoContent {
+    width: 1210px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+.promotionContent {
+    display: flex;
+    align-items: center;
+    column-gap: 120px;
+    font-size: 16px;
+    line-height: 120%;
+}
+.promoContent ul li {
+    background-image: url("../img/markerDark.svg");
+    color: rgb(27, 27, 27);
+    font-size: 16px;
+    background-size: 20px;
+    padding: 0 0 0 30px;
+}
+.promoContent ul{ margin-top: 70px; }

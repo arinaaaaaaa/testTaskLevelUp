@@ -8,6 +8,8 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="./js/timer.js"></script>
+    <script src="./js/phoneValidate.js"></script>
     <div class="pageContainer">
         <div class="firstBlockContainer">
             <div class="firstBlockContent">
@@ -91,6 +93,32 @@
                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorum libero maxime, natus quaerat temporibus? Molestiae aspernatur qui expedita quae.</li>
                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorum libero maxime, natus quaerat temporibus? Molestiae aspernatur qui expedita quae.</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+        <div class="orderSection">
+            <div class="orderSectionContent">
+                <p class="title">LEVELUP</p>
+                <p class="timer">Торопись! Предложение действует еще: <span id="timer"></span></p>
+                <div class="orderForm">
+                    <div class="productSection">
+                        <img src="./img/prod.png" alt="">
+                        <div class="prices">
+                            <p class="newPrice">3000&#8381;</p>
+                            <p class="oldPrice">5600&#8381;</p>
+                        </div>
+                    </div>
+                    <div class="orderPart">
+                        <div class="nameSection">
+                            <input type="text" placeholder="Имя" class="name" >
+                            <span class="example">Например, "Аманда"</span>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Номер телефона" class="phone" onkeypress='phoneValidate(event)'>
+                            <span class="example">Например, "89167863021"</span>
+                        </div>
+                        <button class="order">Оформить заказ</button>
+                    </div>
                 </div>
             </div>
         </div>

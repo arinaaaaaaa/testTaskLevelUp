@@ -24,7 +24,7 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 .firstBlockContent > * { max-width: 1200px; }
-.firstBlockContent .title { 
+.title { 
     font-family: 'Glitch';
     font-size: 63px;
     color: #fff;
@@ -149,3 +149,117 @@
     padding: 0 0 0 30px;
 }
 .promoContent ul{ margin-top: 70px; }
+
+/* Стили пятого блока (блок заказа) */
+.orderSection {
+    position: relative;
+    z-index: 3;
+    background-color: #fff;
+    background-size: 30%;
+    background-repeat: repeat;
+    padding: 80px 0;
+}
+.orderSectionContent {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 80px;
+    background-color: rgba(234,224,255);
+    border-radius: 15px;
+}
+.orderSectionContent .title {
+    font-size: 98px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.timer, #timer {
+    text-align: center;
+    font-size: 21px;
+    font-weight: 500;
+    color: rgb(63, 17, 138);
+}
+.orderForm {
+    margin-top: 80px;
+    display: flex;
+    column-gap: 120px;
+}
+.orderForm > * { width: 50%; }
+.prices { 
+    margin-top: 30px;
+    text-align: center;
+}
+.newPrice {
+    height: 60px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: rgb(63, 17, 138);
+}
+.oldPrice {
+    font-size: 32px;
+    color: rgb(141, 141, 141);
+    text-decoration:line-through;
+}
+
+.newPrice {
+    animation: .5s infinite alternate pulse;
+    -webkit-animation: .5s infinite alternate pulse;
+    -moz-animation: .5s infinite alternate pulse;
+}
+
+@keyframes pulse {
+    from {
+        font-size: 46px;
+    }
+    to {
+        font-size: 62px;
+    }
+}
+@-moz-keyframes pulse {
+    from {
+        font-size: 46px;
+    }
+    to {
+        font-size: 62px;
+    }
+}
+@-webkit-keyframes pulse {
+    from {
+        font-size: 46px;
+    }
+    to {
+        font-size: 62px;
+    }
+}
+
+.orderPart {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    padding: 90px 0 0 0;
+}
+.orderPart > div { width: 100%; position: relative;}
+.orderPart input {
+    width: 100%;
+    height: 60px;
+    border-radius: 45px;
+    padding: 0 20px;
+    outline: none;
+    font-size: 16px;
+    color: rgb(34, 34, 34);
+}
+.example { display: none; font-size: 12px;}
+.orderPart input:focus + .example {
+    display: flex;
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    width: fit-content;
+    padding: 15px;
+    background-color: rgb(94, 74, 141);
+    color: #fff;
+    z-index: 4;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    align-items: center;
+}

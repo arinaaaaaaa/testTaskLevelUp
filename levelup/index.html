@@ -10,6 +10,7 @@
 <body>
     <script src="./js/timer.js"></script>
     <script src="./js/phoneValidate.js"></script>
+    <script src="./js/slider.js"></script>
     <div class="pageContainer">
         <div class="firstBlockContainer">
             <div class="firstBlockContent">
@@ -78,6 +79,15 @@
                 </div>
             </div>
         </div>
+        <div class="slider">
+            <div class="slider-line">
+                <img src="./img/user1.jpeg" alt="">
+                <img src="./img/user2.jpeg" alt="">
+                <img src="./img/user3.jpeg" alt="">
+            </div>
+        </div>
+        <button class="slider-prev">Prev</button>
+        <button class="slider-next">Next</button>
         <div class="promoSection">
             <div class="promoContent">
                 <div class="promotionContent">
@@ -111,7 +121,7 @@
                     <div class="orderPart">
                         <div class="nameSection">
                             <input type="text" placeholder="Имя" class="name" >
-                            <span class="example">Например, "Аманда"</span>
+                            <div class="example">Например, "Аманда"</div>
                         </div>
                         <div>
                             <input type="text" placeholder="Номер телефона" class="phone" onkeypress='phoneValidate(event)'>

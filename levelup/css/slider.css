@@ -29,12 +29,12 @@
     height: 120px;
     border-radius: 50%;
 }
-.name {
+.sliderItem .name {
     margin: 20px 0 30px;
     font-weight: 500;
     font-size: 18px;
 }
-.note {
+.sliderItem .note {
     width: 50%;
     text-align: center;
 }

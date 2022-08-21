@@ -202,11 +202,13 @@
 /* Адаптивность */
 @media (min-width: 1500px) {
     .firstBlockContent > *, .secondBlockContent, .promoContent, .orderSectionContent { width: 1360px; }
+    .firstBlockContent { padding: 70px 0;}
     .title {
         font-size: 90px;
         margin-bottom: 100px;
     }
     .productInfo { column-gap: 150px; }
+    .productSection > img { width: 60%;}
     .productInfo ul li, .information ul li {
         padding: 0 0 0 80px;
         background-size: 35px;
@@ -223,6 +225,7 @@
     .secondBlockContent, .promoContent, .orderSection { padding: 90px 0; }
     .ingredients { row-gap: 50px; }
     .itemImage { padding: 35px 0; }
+    .productSection > img { width: 60%;}
     .itemName {
         margin-top: 15px;
         font-size: 21px;
@@ -247,7 +250,6 @@
         margin-top: 90px;
         column-gap: 140px;
     }
-    .productSection > img { width: 80%;}
     .prices { margin-top: 40px; }
     .newPrice {
         height: 60px;
@@ -267,10 +269,7 @@
         from { font-size: 50px; }
         to { font-size: 68px; }
     }
-    .orderPart {
-        row-gap: 30px;
-        padding: 110px 0 0 0;
-    }
+    .orderPart { padding: 110px 0 0 0; }
     .orderPart input {
         height: 75px;
         padding: 0 30px;
@@ -282,11 +281,13 @@
 
 @media (max-width: 1499px) {
     .firstBlockContent > *, .secondBlockContent, .promoContent, .orderSectionContent { width: 1150px; }
+    .firstBlockContent { padding: 70px 0;}
     .title {
         font-size: 81px;
         margin-bottom: 60px;
     }
     .productInfo { column-gap: 120px; }
+    .productSection > img { width: 60%;}
     .productInfo ul li, .information ul li {
         padding: 0 0 0 55px;
         background-size: 25px;
@@ -327,7 +328,6 @@
         margin-top: 80px;
         column-gap: 120px;
     }
-    .productSection > img { width: 80%;}
     .prices { margin-top: 30px; }
     .newPrice {
         height: 60px;

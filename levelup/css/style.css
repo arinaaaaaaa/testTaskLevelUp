@@ -439,10 +439,6 @@
     .orderPart input:focus + .example { padding: 12px; }
 }
 
-@media (max-width: 1100px) {
-    .firstBlockContent > *, .secondBlockContent, .promoContent, .orderSectionContent { width: 960px; }
-}
-
 @media (max-width: 1099px) {
     .firstBlockContent > *, .secondBlockContent, .promoContent, .orderSectionContent { width: 750px; }
     .title {

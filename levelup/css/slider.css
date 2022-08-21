@@ -1,17 +1,60 @@
-.slider {
-    border: 2px solid black;
-    width: 256px;
-    height: 256px;
-    margin: 20px auto;
+.sliderSection {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    z-index: 3;
+}
+.sliderWrapper { 
+    width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+.sliderContainer {
+    position: relative;
     overflow: hidden;
 }
-
-.slider-line {
-    width: 1024px;
-    height: 256px;
+.sliderTrack {
+    width: 1200px;
     display: flex;
-    background: orange;
-    position: relative;
-    left: 0;
-    transition: all ease 1s;
-}      
+    transition-duration: .5s;
+}
+.sliderItem { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 1200px;
+}
+.sliderTrack img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.name {
+    margin: 20px 0 30px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.note {
+    width: 50%;
+    text-align: center;
+}
+/* Стили для оформления кнопок prev/next */
+.arrowRight, .arrowLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    position: absolute;
+    top: 50%;
+    height: 45px;
+    width: 45px;
+    background-color: rgb(248, 248, 248);
+    border-radius: 50%;
+    color: rgb(165, 165, 165);
+    font-size: 27px;
+    box-shadow: 0 0 15px grey;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.arrowLeft { left:10px; }
+.arrowRight { right:10px; }

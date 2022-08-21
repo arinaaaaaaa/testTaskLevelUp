@@ -29,8 +29,6 @@
     font-family: 'Glitch';
     text-align: center;
     color: #fff;
-    font-size: 63px;
-    margin-bottom: 80px;
 }
 .backgroundVideo {
     position: fixed;
@@ -43,7 +41,6 @@
 .productInfo {
     display: flex;
     justify-content: center;
-    column-gap: 120px;
     align-items: center;
 }
 .productInfo img { 
@@ -54,29 +51,20 @@
 .productInfo > * { width: 50%; }
 .productInfo ul li, .information ul li {
     margin: 0;
-    padding: 0 0 0 60px;
     list-style: none;
     background-image: url("../img/marker.svg");
     background-repeat: no-repeat;
     background-position: left center;
-    background-size: 30px;
     color: #fff;
-    font-size: 21px;
     line-height: 120%;
 }
-.productInfo ul li:not(:last-child) { margin-bottom: 20px; }
-.promoContent ul li:not(:last-child) { margin-bottom: 10px; }
 .order {
-    height: 60px;
-    padding: 0 60px;
     width: fit-content;
-    font-size: 16px;
-    border-radius: 45px;
     border: 2px solid rgb(63, 17, 138);
     background-color: rgb(63, 17, 138);
     color: #fff;
-    margin-top: 40px;
     font-weight: 500;
+    border-radius: 45px;
     transition: all .2s;
 }
 .order:hover { box-shadow: 0px 0px 20px rgb(75, 12, 175); }
@@ -89,8 +77,6 @@
     z-index: 3;
 }
 .secondBlockContent {
-    padding: 80px 0;
-    width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -102,7 +88,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 30px;
 }
 .item {
     display: flex;
@@ -116,14 +101,9 @@
     width: 40%;
     background-color: #fff;
     border-radius: 50%;
-    padding: 25px 0;
 }
 .item img { width: 60%;}
-.itemName {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #fff;
-}
+.itemName { color: #fff; }
 .productSection {
     display: flex;
     flex-direction: column;
@@ -138,26 +118,16 @@
     background: rgb(234,224,255);
     background: linear-gradient(180deg, rgba(234,224,255,1) 0%, rgba(255,255,255,1) 100%);
 }
-.promoContent {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 80px 0;
-}
+.promoContent { margin: 0 auto; }
 .promotionContent {
     display: flex;
     align-items: center;
-    column-gap: 120px;
-    font-size: 16px;
     line-height: 120%;
 }
 .promoContent ul li {
     background-image: url("../img/markerDark.svg");
     color: rgb(27, 27, 27);
-    font-size: 16px;
-    background-size: 20px;
-    padding: 0 0 0 30px;
 }
-.promoContent ul{ margin-top: 70px; }
 .promoContent img { max-width: 50%;}
 
 /* Стили пятого блока (блок заказа) */
@@ -167,44 +137,26 @@
     background-color: #fff;
     background-size: 30%;
     background-repeat: repeat;
-    padding: 80px 0;
 }
 .orderSectionContent {
-    width: 1200px;
     margin: 0 auto;
-    padding: 80px;
     background-color: rgba(234,224,255);
     border-radius: 15px;
 }
-.orderSectionContent .title {
-    font-size: 98px;
-    text-align: center;
-    margin-bottom: 40px;
-}
+.orderSectionContent .title { text-align: center; }
 .timer, #timer {
     text-align: center;
-    font-size: 21px;
     font-weight: 500;
     color: rgb(63, 17, 138);
 }
-.orderForm {
-    margin-top: 80px;
-    display: flex;
-    column-gap: 120px;
-}
+.orderForm { display: flex; }
 .orderForm > * { width: 50%; }
-.prices { 
-    margin-top: 30px;
-    text-align: center;
-}
+.prices { text-align: center; }
 .newPrice {
-    height: 60px;
     font-weight: 500;
-    margin-bottom: 5px;
     color: rgb(63, 17, 138);
 }
 .oldPrice {
-    font-size: 32px;
     color: rgb(141, 141, 141);
     text-decoration:line-through;
 }
@@ -214,38 +166,10 @@
     -webkit-animation: .5s infinite alternate pulse;
     -moz-animation: .5s infinite alternate pulse;
 }
-
-@keyframes pulse {
-    from {
-        font-size: 46px;
-    }
-    to {
-        font-size: 62px;
-    }
-}
-@-moz-keyframes pulse {
-    from {
-        font-size: 46px;
-    }
-    to {
-        font-size: 62px;
-    }
-}
-@-webkit-keyframes pulse {
-    from {
-        font-size: 46px;
-    }
-    to {
-        font-size: 62px;
-    }
-}
-
 .orderPart {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
     align-items: center;
-    padding: 90px 0 0 0;
 }
 .orderPart > div { width: 100%; position: relative;}
 .orderPart input {
@@ -273,4 +197,691 @@
     border-bottom-right-radius: 45px;
     align-items: center;
     line-height: 120%;
+}
+
+/* Адаптивность */
+@media (min-width: 1500px) {
+    .firstBlockContent > *, .secondBlockContent, .promoContent, .orderSectionContent { width: 1360px; }
+    .title {
+        font-size: 90px;
+        margin-bottom: 100px;
+    }
+    .productInfo { column-gap: 150px; }
+    .productInfo ul li, .information ul li {
+        padding: 0 0 0 80px;
+        background-size: 35px;
+        font-size: 24px;
+    }
+    .productInfo ul li:not(:last-child) { margin-bottom: 30px; }
+    .promoContent ul li:not(:last-child) { margin-bottom: 20px; }
+    .order {
+        height: 70px;
+        padding: 0 65px;
+        font-size: 21px;
+        margin-top: 45px;
+    }
+    .secondBlockContent, .promoContent, .orderSection { padding: 90px 0; }
+    .ingredients { row-gap: 50px; }
+    .itemImage { padding: 35px 0; }
+    .itemName {
+        margin-top: 15px;
+        font-size: 21px;
+    }
+    .promotionContent {
+        column-gap: 140px;
+        font-size: 21px;
+    }
+    .promoContent ul li {
+        font-size: 21px;
+        background-size: 35px;
+        padding: 0 0 0 70px;
+    }
+    .promoContent ul{ margin-top: 70px; }
+    .orderSectionContent { padding: 90px;}
+    .orderSectionContent .title {
+        font-size: 128px;
+        margin-bottom: 40px;
+    }
+    .timer, #timer { font-size: 24px; }
+    .orderForm {
+        margin-top: 90px;
+        column-gap: 140px;
+    }
+    .productSection > img { width: 80%;}
+    .prices { margin-top: 40px; }
+    .newPrice {
+        height: 60px;
+        margin-bottom: 8px;
+    }
+    .oldPrice { font-size: 34px; }
+
+    @keyframes pulse {
+        from { font-size: 50px; }
+        to { font-size: 68px; }
+    }
+    @-moz-keyframes pulse {
+        from { font-size: 50px; }
+        to { font-size: 68px; }
+    }
+    @-webkit-keyframes pulse {
+        from { font-size: 50px; }
+        to { font-size: 68px; }
+    }
+    .orderPart {
+        row-gap: 30px;
+        padding: 110px 0 0 0;
+    }
+    .orderPart input {
+        height: 75px;
+        padding: 0 30px;
+        font-size: 21px;
+    }
+    .example { font-size: 18px;}
+    .orderPart input:focus + .example { padding: 20px; }
+}
+
+@media (max-width: 1499px) {
+    .firstBlockContent > *, .secondBlockContent, .promoContent, .orderSectionContent { width: 1150px; }
+    .title {
+        font-size: 81px;
+        margin-bottom: 60px;
+    }
+    .productInfo { column-gap: 120px; }
+    .productInfo ul li, .information ul li {
+        padding: 0 0 0 55px;
+        background-size: 25px;
+        font-size: 16px;
+    }
+    .productInfo ul li:not(:last-child) { margin-bottom: 25px; }
+    .promoContent ul li:not(:last-child) { margin-bottom: 15px; }
+    .order {
+        height: 60px;
+        padding: 0 55px;
+        font-size: 16px;
+        margin-top: 35px;
+    }
+    .secondBlockContent, .promoContent, .orderSection { padding: 80px 0; }
+    .ingredients { row-gap: 40px; }
+    .itemImage { padding: 25px 0; }
+    .itemName {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    .promotionContent {
+        column-gap: 120px;
+        font-size: 16px;
+    }
+    .promoContent ul li {
+        font-size: 16px;
+        background-size: 25px;
+        padding: 0 0 0 55px;
+    }
+    .promoContent ul{ margin-top: 50px; }
+    .orderSectionContent { padding: 80px;}
+    .orderSectionContent .title {
+        font-size: 94px;
+        margin-bottom: 35px;
+    }
+    .timer, #timer { font-size: 18px; }
+    .orderForm {
+        margin-top: 80px;
+        column-gap: 120px;
+    }
+    .productSection > img { width: 80%;}
+    .prices { margin-top: 30px; }
+    .newPrice {
+        height: 60px;
+        margin-bottom: 8px;
+    }
+    .oldPrice { font-size: 32px; }
+
+    @keyframes pulse {
+        from { font-size: 46px; }
+        to { font-size: 57px; }
+    }
+    @-moz-keyframes pulse {
+        from { font-size: 46px; }
+        to { font-size: 57px; }
+    }
+    @-webkit-keyframes pulse {
+        from { font-size: 46px; }
+        to { font-size: 57px; }
+    }
+    .orderPart {
+        row-gap: 20px;
+        padding: 100px 0 0 0;
+    }
+    .orderPart input {
+        height: 65px;
+        padding: 0 25px;
+        font-size: 16px;
+    }
+    .example { font-size: 16px;}
+    .orderPart input:focus + .example { padding: 15px; }
+}
+
+@media (max-width: 1280px) {
+    .firstBlockContent > *, .secondBlockContent, .promoContent, .orderSectionContent { width: 1050px; }
+    .title {
+        font-size: 68px;
+        margin-bottom: 55px;
+    }
+    .productInfo { column-gap: 100px; }
+    .productInfo ul li, .information ul li {
+        padding: 0 0 0 50px;
+        background-size: 25px;
+        font-size: 14px;
+    }
+    .productInfo ul li:not(:last-child) { margin-bottom: 20px; }
+    .promoContent ul li:not(:last-child) { margin-bottom: 15px; }
+    .order {
+        height: 55px;
+        padding: 0 50px;
+        font-size: 14px;
+        margin-top: 30px;
+    }
+    .secondBlockContent, .promoContent, .orderSection { padding: 70px 0; }
+    .ingredients { row-gap: 35px; }
+    .itemImage { padding: 25px 0; }
+    .itemName {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .promotionContent {
+        column-gap: 100px;
+        font-size: 14px;
+    }
+    .promoContent ul li {
+        font-size: 14px;
+        background-size: 21px;
+        padding: 0 0 0 45px;
+    }
+    .promoContent ul{ margin-top: 45px; }
+    .orderSectionContent { padding: 70px;}
+    .orderSectionContent .title {
+        font-size: 81px;
+        margin-bottom: 25px;
+    }
+    .timer, #timer { font-size: 16px; }
+    .orderForm {
+        margin-top: 70px;
+        column-gap: 100px;
+    }
+    .prices { margin-top: 25px; }
+    .newPrice {
+        height: 60px;
+        margin-bottom: 5px;
+    }
+    .oldPrice { font-size: 27px; }
+
+    @keyframes pulse {
+        from { font-size: 42px; }
+        to { font-size: 54px; }
+    }
+    @-moz-keyframes pulse {
+        from { font-size: 42px; }
+        to { font-size: 54px; }
+    }
+    @-webkit-keyframes pulse {
+        from { font-size: 42px; }
+        to { font-size: 54px; }
+    }
+    .orderPart {
+        row-gap: 15px;
+        padding: 100px 0 0 0;
+    }
+    .orderPart input {
+        height: 60px;
+        padding: 0 20px;
+        font-size: 14px;
+    }
+    .example { font-size: 14px;}
+    .orderPart input:focus + .example { padding: 12px; }
+}
+
+@media (max-width: 1100px) {
+    .firstBlockContent > *, .secondBlockContent, .promoContent, .orderSectionContent { width: 960px; }
+}
+
+@media (max-width: 1099px) {
+    .firstBlockContent > *, .secondBlockContent, .promoContent, .orderSectionContent { width: 750px; }
+    .title {
+        font-size: 56px;
+        margin-bottom: 45px;
+    }
+    .productInfo { column-gap: 70px; }
+    .productInfo ul li, .information ul li {
+        padding: 0 0 0 45px;
+        background-size: 20px;
+        font-size: 12px;
+    }
+    .productInfo ul li:not(:last-child) { margin-bottom: 15px; }
+    .promoContent ul li:not(:last-child) { margin-bottom: 10px; }
+    .order {
+        height: 50px;
+        padding: 0 45px;
+        font-size: 12px;
+        margin-top: 25px;
+    }
+    .secondBlockContent, .promoContent, .orderSection { padding: 60px 0; }
+    .ingredients { row-gap: 30px; }
+    .itemImage { padding: 20px 0; }
+    .itemName {
+        margin-top: 8px;
+        font-size: 14px;
+    }
+    .promotionContent {
+        column-gap: 70px;
+        font-size: 12px;
+    }
+    .promoContent ul li {
+        font-size: 12px;
+        background-size: 18px;
+        padding: 0 0 0 40px;
+    }
+    .promoContent ul{ margin-top: 40px; }
+    .orderSectionContent { padding: 60px;}
+    .orderSectionContent .title {
+        font-size: 68px;
+        margin-bottom: 20px;
+    }
+    .timer, #timer { font-size: 14px; }
+    .orderForm {
+        margin-top: 60px;
+        column-gap: 70px;
+    }
+    .productSection > img { width: 80%;}
+    .prices { margin-top: 20px; }
+    .newPrice {
+        height: 50px;
+        margin-bottom: 3px;
+    }
+    .oldPrice { font-size: 24px; }
+
+    @keyframes pulse {
+        from { font-size: 36px; }
+        to { font-size: 48px; }
+    }
+    @-moz-keyframes pulse {
+        from { font-size: 36px; }
+        to { font-size: 48px; }
+    }
+    @-webkit-keyframes pulse {
+        from { font-size: 36px; }
+        to { font-size: 48px; }
+    }
+    .orderPart {
+        row-gap: 15px;
+        padding: 100px 0 0 0;
+    }
+    .orderPart input {
+        height: 50px;
+        padding: 0 18px;
+        font-size: 12px;
+    }
+    .example { font-size: 12px;}
+    .orderPart input:focus + .example { padding: 12px; }
+}
+
+@media (max-width: 840px) {
+    .firstBlockContent > *, .secondBlockContent, .promoContent, .orderSectionContent { width: 640px; }
+    .productInfo > img { height: 55vh;}
+    .title {
+        font-size: 52px;
+        margin-bottom: 40px;
+    }
+    .productInfo { column-gap: 65px; }
+    .productInfo ul li, .information ul li {
+        padding: 0 0 0 40px;
+        background-size: 18px;
+        font-size: 10px;
+    }
+    .productInfo ul li:not(:last-child) { margin-bottom: 12px; }
+    .promoContent ul li:not(:last-child) { margin-bottom: 8px; }
+    .order {
+        height: 45px;
+        padding: 0 40px;
+        font-size: 10px;
+        margin-top: 15px;
+    }
+    .secondBlockContent, .promoContent, .orderSection { padding: 50px 0; }
+    .ingredients { row-gap: 25px; }
+    .itemImage { padding: 18px 0; }
+    .itemName {
+        margin-top: 8px;
+        font-size: 12px;
+    }
+    .promotionContent {
+        column-gap: 50px;
+        font-size: 10px;
+    }
+    .promoContent ul li {
+        font-size: 10px;
+        background-size: 12px;
+        padding: 0 0 0 35px;
+    }
+    .promoContent ul{ margin-top: 35px; }
+    .orderSectionContent { padding: 50px;}
+    .orderSectionContent .title {
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+    .timer, #timer { font-size: 12px; }
+    .orderForm {
+        margin-top: 50px;
+        column-gap: 60px;
+    }
+    .productSection > img { width: 75%;}
+    .prices { margin-top: 15px; }
+    .newPrice {
+        height: 40px;
+        margin-bottom: 3px;
+    }
+    .oldPrice { font-size: 21px; }
+
+    @keyframes pulse {
+        from { font-size: 27px; }
+        to { font-size: 36px; }
+    }
+    @-moz-keyframes pulse {
+        from { font-size: 27px; }
+        to { font-size: 36px; }
+    }
+    @-webkit-keyframes pulse {
+        from { font-size: 27px; }
+        to { font-size: 36px; }
+    }
+    .orderPart {
+        row-gap: 10px;
+        padding: 70px 0 0 0;
+    }
+    .orderPart input {
+        height: 45px;
+        padding: 0 15px;
+        font-size: 10px;
+    }
+    .example { font-size: 10px;}
+    .orderPart input:focus + .example { padding: 10px; }
+}
+
+@media (max-width: 720px) {
+    .firstBlockContent > *, .secondBlockContent, .promoContent, .orderSectionContent { width: 540px; }
+    .productInfo > img { height: 50vh;}
+    .title {
+        font-size: 46px;
+        margin-bottom: 35px;
+    }
+    .productInfo { column-gap: 60px; }
+    .productInfo ul li, .information ul li {
+        padding: 0 0 0 35px;
+        background-size: 15px;
+        font-size: 9px;
+    }
+    .productInfo ul li:not(:last-child) { margin-bottom: 10px; }
+    .promoContent ul li:not(:last-child) { margin-bottom: 5px; }
+    .order {
+        height: 40px;
+        padding: 0 35px;
+        font-size: 9px;
+        margin-top: 15px;
+    }
+    .secondBlockContent, .promoContent, .orderSection { padding: 45px 0; }
+    .ingredients { row-gap: 15px; }
+    .itemImage { padding: 15px 0; }
+    .itemName {
+        margin-top: 8px;
+        font-size: 11px;
+    }
+    .promotionContent {
+        column-gap: 45px;
+        font-size: 9px;
+    }
+    .promoContent ul li {
+        font-size: 9px;
+        background-size: 11px;
+        padding: 0 0 0 30px;
+    }
+    .promoContent ul { margin-top: 30px; }
+    .orderSectionContent { padding: 45px;}
+    .orderSectionContent .title {
+        font-size: 46px;
+        margin-bottom: 10px;
+    }
+    .timer, #timer { font-size: 11px; }
+    .orderForm {
+        margin-top: 40px;
+        column-gap: 50px;
+    }
+    .productSection > img { width: 72%;}
+    .prices { margin-top: 15px; }
+    .newPrice {
+        height: 35px;
+        margin-bottom: 3px;
+    }
+    .oldPrice { font-size: 18px; }
+
+    @keyframes pulse {
+        from { font-size: 24px; }
+        to { font-size: 32px; }
+    }
+    @-moz-keyframes pulse {
+        from { font-size: 24px; }
+        to { font-size: 32px; }
+    }
+    @-webkit-keyframes pulse {
+        from { font-size: 24px; }
+        to { font-size: 32px; }
+    }
+    .orderPart {
+        row-gap: 8px;
+        padding: 50px 0 0 0;
+    }
+    .orderPart input {
+        height: 40px;
+        padding: 0 12px;
+        font-size: 9px;
+    }
+    .example { font-size: 9px;}
+    .orderPart input:focus + .example { padding: 8px; }
+}
+
+@media (max-width: 610px) {
+    .firstBlockContent > *, .secondBlockContent, .promoContent, .orderSectionContent, .productInfo { width: 420px; }
+    .firstBlockContent { padding: 30px 0;}
+    .productInfo > img { height: 50vh;}
+    .title {
+        font-size: 56px;
+        margin-bottom: 40px;
+    }
+    .productInfo { 
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    .productInfo .information { 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .productInfo ul li, .information ul li {
+        padding: 0 0 0 45px;
+        background-size: 21px;
+        font-size: 14px;
+    }
+    .productInfo ul li:not(:last-child) { margin-bottom: 20px; }
+    .promoContent ul li:not(:last-child) { margin-bottom: 15px; }
+    .order {
+        height: 55px;
+        padding: 0 45px;
+        font-size: 14px;
+        margin-top: 25px;
+    }
+    .secondBlockContent, .promoContent, .orderSection { padding: 60px 0; }
+    .secondBlockContent {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    .ingredients { 
+        width: 100%;
+        flex-direction: row;
+        column-gap: 20px;
+    }
+    .itemImage { padding: 15px 0; width: 90%; }
+    .itemName {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .productSection { width: 100%; }
+    .productSection > img { width: 55%;}
+    .promotionContent {
+        row-gap: 20px;
+        flex-direction: column;
+        font-size: 14px;
+    }
+    .promotionContent > img { max-width: 80%; }
+    .promotionContent > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .promoContent ul li {
+        font-size: 14px;
+        background-size: 21px;
+        padding: 0 0 0 45px;
+    }
+    .promoContent ul { margin-top: 60px; }
+    .orderSectionContent { padding: 60px;}
+    .orderSectionContent .title {
+        font-size: 56px;
+        margin-bottom: 20px;
+    }
+    .timer, #timer {
+        font-size: 16px;
+        line-height: 120%;
+    }
+    .orderForm {
+        flex-direction: column;
+        row-gap: 30px;
+        margin-top: 40px;
+    }
+    .prices { margin-top: 25px; }
+    .newPrice {
+        height: 45px;
+        margin-bottom: 8px;
+    }
+    .oldPrice { font-size: 24px; }
+
+    @keyframes pulse {
+        from { font-size: 32px; }
+        to { font-size: 46px; }
+    }
+    @-moz-keyframes pulse {
+        from { font-size: 32px; }
+        to { font-size: 46px; }
+    }
+    @-webkit-keyframes pulse {
+        from { font-size: 32px; }
+        to { font-size: 46px; }
+    }
+    .orderPart {
+        width: 100%;
+        row-gap: 10px;
+        padding: 30px 0 0 0;
+    }
+    .orderPart input {
+        height: 60px;
+        padding: 0 20px;
+        font-size: 14px;
+    }
+    .example { font-size: 14px;}
+    .orderPart input:focus + .example { 
+        left: 80%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 460px) {
+    .firstBlockContent > *, .secondBlockContent, .promoContent, .orderSectionContent, .productInfo { width: 290px; }
+    .firstBlockContent { padding: 30px 0;}
+    .productInfo > img { height: 45vh; }
+    .title {
+        font-size: 48px;
+        margin-bottom: 35px;
+    }
+    .productInfo { row-gap: 30px; }
+    .productInfo ul li, .information ul li {
+        padding: 0 0 0 35px;
+        background-size: 18px;
+        font-size: 12px;
+    }
+    .productInfo ul li:not(:last-child) { margin-bottom: 15px; }
+    .promoContent ul li:not(:last-child) { margin-bottom: 10px; }
+    .order {
+        height: 50px;
+        padding: 0 40px;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+    .secondBlockContent, .promoContent, .orderSection { padding: 50px 0; }
+    .secondBlockContent { row-gap: 30px; }
+    .ingredients { column-gap: 15px; }
+    .itemImage { padding: 12px 0; width: 80%; }
+    .itemName {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .promotionContent {
+        row-gap: 15px;
+        font-size: 12px;
+    }
+    .promotionContent > img { max-width: 90%; }
+    .promoContent ul li {
+        font-size: 12px;
+        background-size: 18px;
+        padding: 0 0 0 40px;
+    }
+    .promoContent ul { margin-top: 50px; }
+    .orderSectionContent { padding: 40px 30px;}
+    .orderSectionContent .title {
+        font-size: 46px;
+        margin-bottom: 15px;
+    }
+    .timer, #timer { font-size: 14px; }
+    .orderForm {
+        row-gap: 25px;
+        margin-top: 35px;
+    }
+    .prices { margin-top: 20px; }
+    .newPrice {
+        height: 40px;
+        margin-bottom: 5px;
+    }
+    .oldPrice { font-size: 18px; }
+
+    @keyframes pulse {
+        from { font-size: 24px; }
+        to { font-size: 32px; }
+    }
+    @-moz-keyframes pulse {
+        from { font-size: 24px; }
+        to { font-size: 32px; }
+    }
+    @-webkit-keyframes pulse {
+        from { font-size: 24px; }
+        to { font-size: 32px; }
+    }
+    .orderPart {
+        row-gap: 8px;
+        padding: 25px 0 0 0;
+    }
+    .orderPart input {
+        height: 50px;
+        padding: 0 15px;
+        font-size: 12px;
+    }
+    .example { font-size: 12px;}
+    .orderPart input:focus + .example { 
+        left: 70%;
+        padding: 10px;
+    }
 }

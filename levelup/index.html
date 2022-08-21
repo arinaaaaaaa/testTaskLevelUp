@@ -8,9 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="./js/timer.js"></script>
-    <script src="./js/phoneValidate.js"></script>
-    <script src="./js/slider.js"></script>
     <div class="pageContainer">
         <div class="firstBlockContainer">
             <div class="firstBlockContent">
@@ -79,15 +76,31 @@
                 </div>
             </div>
         </div>
-        <div class="slider">
-            <div class="slider-line">
-                <img src="./img/user1.jpeg" alt="">
-                <img src="./img/user2.jpeg" alt="">
-                <img src="./img/user3.jpeg" alt="">
+        <div class="sliderSection">
+            <div class="sliderWrapper">
+                <div class="sliderContainer">
+                    <button class="arrowLeft" onclick="PrevScroll()">&lt;</button>
+                    <button class="arrowRight" onclick="NextScroll()">&gt;</button>
+                    <div class="sliderTrack">
+                        <div class="sliderItem">
+                            <img src="./img/user1.jpeg" alt="">
+                            <p class="name">Андрей</p>
+                            <p class="note">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque voluptatibus, fuga earum cumque aspernatur explicabo veniam numquam, obcaecati fugit laborum animi velit impedit ea maxime rerum voluptas, illo debitis officia molestiae quae quis provident. Non reiciendis ut animi quisquam, officia dicta vel tenetur, illum mollitia deserunt quas similique qui eum itaque eos architecto! Quod, libero numquam voluptatum consequuntur dolores eligendi magni repudiandae. Cupiditate saepe sit tenetur consequatur? Rerum adipisci earum nam mollitia quas qui suscipit fugiat provident tenetur, vero excepturi beatae illum quos necessitatibus, accusantium asperiores aspernatur inventore maiores quo esse, repellat quae id animi. Nihil, alias sequi deserunt sint ad repellat dolorum, sapiente officiis, corporis suscipit ex obcaecati molestias cumque placeat perspiciatis. Iste, fugiat unde enim ab culpa ad a beatae amet. Voluptatum quos nulla impedit unde quo quaerat?</p>
+                        </div>
+                        <div class="sliderItem">
+                            <img src="./img/user2.jpeg" alt="">
+                            <p class="name">Наталья</p>
+                            <p class="note">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque voluptatibus, fuga earum cumque aspernatur explicabo veniam numquam, obcaecati fugit laborum animi velit impedit ea maxime rerum voluptas, illo debitis officia molestiae quae quis provident. Non reiciendis ut animi quisquam, officia dicta vel tenetur, illum mollitia deserunt quas similique qui eum itaque eos architecto! Quod, libero numquam voluptatum consequuntur dolores eligendi magni repudiandae. Cupiditate saepe sit tenetur consequatur? Rerum adipisci earum nam mollitia quas qui suscipit fugiat provident tenetur, vero excepturi beatae illum quos necessitatibus, accusantium asperiores aspernatur inventore maiores quo esse, repellat quae id animi. Nihil, alias sequi deserunt sint ad repellat dolorum, sapiente officiis, corporis suscipit ex obcaecati molestias cumque placeat perspiciatis. Iste, fugiat unde enim ab culpa ad a beatae amet. Voluptatum quos nulla impedit unde quo quaerat?</p>
+                        </div>
+                        <div class="sliderItem">
+                            <img src="./img/user3.jpeg" alt="">
+                            <p class="name">Алина</p>
+                            <p class="note">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque voluptatibus, fuga earum cumque aspernatur explicabo veniam numquam, obcaecati fugit laborum animi velit impedit ea maxime rerum voluptas, illo debitis officia molestiae quae quis provident. Non reiciendis ut animi quisquam, officia dicta vel tenetur, illum mollitia deserunt quas similique qui eum itaque eos architecto! Quod, libero numquam voluptatum consequuntur dolores eligendi magni repudiandae. Cupiditate saepe sit tenetur consequatur? Rerum adipisci earum nam mollitia quas qui suscipit fugiat provident tenetur, vero excepturi beatae illum quos necessitatibus, accusantium asperiores aspernatur inventore maiores quo esse, repellat quae id animi. Nihil, alias sequi deserunt sint ad repellat dolorum, sapiente officiis, corporis suscipit ex obcaecati molestias cumque placeat perspiciatis. Iste, fugiat unde enim ab culpa ad a beatae amet. Voluptatum quos nulla impedit unde quo quaerat?</p>
+                        </div>
+                    </div>
+                </div>    
             </div>
         </div>
-        <button class="slider-prev">Prev</button>
-        <button class="slider-next">Next</button>
         <div class="promoSection">
             <div class="promoContent">
                 <div class="promotionContent">
@@ -133,5 +146,8 @@
             </div>
         </div>
     </div>
+    <script src="./js/timer.js"></script>
+    <script src="./js/phoneValidate.js"></script>
+    <script src="./js/slider.js"></script>
 </body>
 </html>

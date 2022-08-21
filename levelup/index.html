@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/style.css" rel="stylesheet" type="text/css">
-    <title>Document</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>LevelUp</title>
 </head>
 <body>
     <div class="pageContainer">
@@ -20,7 +22,7 @@
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorum libero maxime, natus quaerat temporibus? Molestiae aspernatur qui expedita quae.</li>
                             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorum libero maxime, natus quaerat temporibus? Molestiae aspernatur qui expedita quae.</li>
                         </ul>
-                        <button class="order">Заказать</button>
+                        <button class="order" onclick = "scrollToOrder()">Заказать</button>
                     </div>
                 </div>
             </div>
@@ -52,7 +54,7 @@
                 </div>
                 <span class="productSection">
                     <img src="./img/prod.png" alt="">
-                    <button class="order">Заказать</button>
+                    <button class="order" onclick = "scrollToOrder()">Заказать</button>
                 </span>
                 <div class="ingredients">
                     <div class="item">
@@ -107,7 +109,7 @@
                     <img src="./img/doctor.png" alt="">
                     <div>
                         <p class="promoText">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere enim id officia quo, quisquam vero molestiae, illo ex nihil sequi esse consequuntur veritatis totam quasi? Et iure quos, voluptate necessitatibus nesciunt nam tempora vero odio consequuntur. Accusantium culpa dolorum quod. Vitae natus deleniti nihil possimus error? Architecto itaque alias amet, vel cupiditate possimus in similique explicabo. Perspiciatis quae reiciendis natus beatae excepturi nemo mollitia soluta consequuntur dolorum eveniet, repellat qui perferendis facilis iste laboriosam fugit quis earum quas a illo voluptatum sint molestiae tempore cumque! Maxime odio cupiditate cumque recusandae, officiis, saepe architecto quos distinctio, dolores minima dignissimos voluptate voluptatum!</p>
-                        <button class="order">Заказать</button>
+                        <button class="order" onclick = "scrollToOrder()">Заказать</button>
                     </div>
                 </div>
                 <div class="information">
@@ -120,7 +122,7 @@
             </div>
         </div>
         <div class="orderSection">
-            <div class="orderSectionContent">
+            <div class="orderSectionContent" id="order">
                 <p class="title">LEVELUP</p>
                 <p class="timer">Торопись! Предложение действует еще: <span id="timer"></span></p>
                 <div class="orderForm">
@@ -140,7 +142,7 @@
                             <input type="text" placeholder="Номер телефона" class="phone" onkeypress='phoneValidate(event)'>
                             <span class="example">Например, "89167863021"</span>
                         </div>
-                        <button class="order">Оформить заказ</button>
+                        <button class="order" onclick='alert("Спасибо за заказ!")'>Оформить заказ</button>
                     </div>
                 </div>
             </div>
@@ -149,5 +151,6 @@
     <script src="./js/timer.js"></script>
     <script src="./js/phoneValidate.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/scroll.js"></script>
 </body>
 </html>
